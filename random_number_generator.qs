@@ -12,7 +12,7 @@ operation GenerateRandomBit(): Result{
 }
 
 
-operation GenerateRandomNumberInRange(max: Int): Int{
+operation GenerateRandomNumberInRange(max: Int,min: Int): Int{
     mutable bits = [];
     // Determine how many bits are required to store `max`
     let nBits = BitSizeI(max);
@@ -24,12 +24,20 @@ operation GenerateRandomNumberInRange(max: Int): Int{
     // Convert the bits to integer
     let sample = ResultArrayAsInt(bits);
 
-    // Check wether the integer exceeds `max` or not
-    return sample > max? GenerateRandomNumberInRange(max) | sample;
+    // Check wether the integer exceeds `max` and doesn't drop below `min` or not
+    if sample < min or sample > max {
+        return GenerateRandomNumberInRange(max, min);
+    } else {
+        return sample;
+    }
 }
 
 operation Main(): Int{
     let max = 100;
-    Message($"Sampling a random number between 0 and {max}: ");
-    return GenerateRandomNumberInRange(max);
+    let min = 10;
+    Message($"Sampling a random number between {min} and {max}: ");
+    return GenerateRandomNumberInRange(max, min);
 }
+
+// Bonus exercise
+// Try to modify the program to also require the generated random number to be greater than some minimum number, min, instead of zero. (completed)
