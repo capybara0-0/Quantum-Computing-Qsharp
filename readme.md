@@ -1,1 +1,1 @@
-Install Quantum Development Kit.
+Install Azure Quantum Development Kit.
