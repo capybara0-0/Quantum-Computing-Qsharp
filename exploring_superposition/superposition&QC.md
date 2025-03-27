@@ -165,6 +165,44 @@ The original state was not properly normalized, because the initial probabilitie
 
 A qubit is described by the amplitudes $\alpha = \sqrt{0.8}$ and $\beta = \sqrt{0.2}$. What are the probabilities of observing the qubit in states 0 and 1?
 
+#### **Solution to Question 3**
+
+Given a qubit state:
+
+$$
+|\psi\rangle = \alpha |0\rangle + \beta |1\rangle
+$$
+
+where:
+
+- $\alpha = \sqrt{0.8}$
+- $\beta = \sqrt{0.2}$
+
+#### **Step 1: Compute $P(0) = |\alpha|^2$**
+
+$$
+P(0) = \left( \sqrt{0.8} \right)^2 = 0.8
+$$
+
+#### **Step 2: Compute $P(1) = |\beta|^2$**
+
+$$
+P(1) = \left( \sqrt{0.2} \right)^2 = 0.2
+$$
+
+#### **Step 3: Check Normalization**
+
+$$
+P(0) + P(1) = 0.8 + 0.2 = 1 \quad \text{(valid state)}
+$$
+
+#### **Final Answer**
+
+- Probability of measuring $|0\rangle$: $\boxed{0.8}$
+- Probability of measuring $|1\rangle$: $\boxed{0.2}$
+
+_(State is properly normalized.)_
+
 ---
 
 #### Question 4
