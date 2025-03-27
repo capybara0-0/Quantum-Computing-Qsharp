@@ -6,12 +6,12 @@ $$
 
 where $\alpha$ and $\beta$ are complex amplitudes.
 
-### Probabilities
+#### Probabilities
 
 - Probability of state $|0\rangle$: $|\alpha|^2$
 - Probability of state $|1\rangle$: $|\beta|^2$
 
-#### bonus exercises
+### bonus exercises
 
 #### Question 1
 
@@ -208,6 +208,69 @@ _(State is properly normalized.)_
 #### Question 4
 
 If a qubit has amplitudes $\alpha = 3$ and $\beta = 4$, what are the probabilities of finding the qubit in states 0 and 1? Note that these amplitudes are not normalized.
+
+#### **Solution to Question 4**
+
+Given a qubit state:
+
+$$
+|\psi\rangle = \alpha |0\rangle + \beta |1\rangle
+$$
+
+where:
+
+- $\alpha = 3$
+- $\beta = 4$
+
+#### **Step 1: Compute $P(0) = |\alpha|^2$**
+
+Since $\alpha$ is real:
+
+$$
+P(0) = |3|^2 = 9
+$$
+
+#### **Step 2: Compute $P(1) = |\beta|^2$**
+
+Since $\beta$ is real:
+
+$$
+P(1) = |4|^2 = 16
+$$
+
+#### **Step 3: Check Normalization**
+
+$$
+P(0) + P(1) = 9 + 16 = 25 \neq 1 \quad \text{(not normalized)}
+$$
+
+#### **Step 4: Normalize the State**
+
+The normalization factor is $\sqrt{|\alpha|^2 + |\beta|^2} = \sqrt{25} = 5$.  
+The normalized amplitudes are:
+
+$$
+\alpha_{\text{norm}} = \frac{3}{5}, \quad \beta_{\text{norm}} = \frac{4}{5}
+$$
+
+Now, the valid probabilities are:
+
+$$
+P_{\text{norm}}(0) = \left( \frac{3}{5} \right)^2 = \frac{9}{25}, \quad P_{\text{norm}}(1) = \left( \frac{4}{5} \right)^2 = \frac{16}{25}
+$$
+
+#### **Final Answer**
+
+- **Unnormalized probabilities (invalid):**
+
+  - $P(0) = \boxed{9}$
+  - $P(1) = \boxed{16}$
+
+- **Normalized probabilities (valid):**
+  - $P(0) = \boxed{\dfrac{9}{25}}$
+  - $P(1) = \boxed{\dfrac{16}{25}}$
+
+_(Original state was not normalized; corrected probabilities sum to 1.)_
 
 ---
 
