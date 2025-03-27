@@ -13,7 +13,7 @@ where $\alpha$ and $\beta$ are complex amplitudes.
 
 ### bonus exercises
 
-#### Question 1
+### Question 1
 
 Given a qubit with probability amplitudes $\alpha = \frac{1}{2}$ and $\beta = \frac{\sqrt{3}}{2}$, calculate the probabilities of finding the qubit in states 0 and 1.
 
@@ -67,7 +67,7 @@ $$
 
 ---
 
-#### Question 2
+### Question 2
 
 For a qubit with amplitudes $\alpha = 2 + i$ and $\beta = 1 - i$, determine the probabilities of measuring the qubit in states 0 and 1. Also, check if the amplitudes are normalized.
 
@@ -161,7 +161,7 @@ The original state was not properly normalized, because the initial probabilitie
 
 ---
 
-#### Question 3
+### Question 3
 
 A qubit is described by the amplitudes $\alpha = \sqrt{0.8}$ and $\beta = \sqrt{0.2}$. What are the probabilities of observing the qubit in states 0 and 1?
 
@@ -205,7 +205,7 @@ _(State is properly normalized.)_
 
 ---
 
-#### Question 4
+### Question 4
 
 If a qubit has amplitudes $\alpha = 3$ and $\beta = 4$, what are the probabilities of finding the qubit in states 0 and 1? Note that these amplitudes are not normalized.
 
@@ -274,8 +274,88 @@ _(Original state was not normalized; corrected probabilities sum to 1.)_
 
 ---
 
-#### Question 5
+### Question 5
 
 Given a qubit with complex amplitudes $\alpha = \frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}$ and $\beta = \frac{1}{\sqrt{2}} - \frac{i}{\sqrt{2}}$, calculate the probabilities of observing the qubit in states 0 and 1.
+
+#### **Solution to Question 5**
+
+Given a qubit state:
+
+$$
+|\psi\rangle = \alpha |0\rangle + \beta |1\rangle
+$$
+
+where:
+
+- $\alpha = \frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}$
+- $\beta = \frac{1}{\sqrt{2}} - \frac{i}{\sqrt{2}}$
+
+#### **Step 1: Compute $P(0) = |\alpha|^2$**
+
+For a complex number $z = a + bi$, the squared magnitude is $|z|^2 = a^2 + b^2$.
+
+Here, $\alpha = \frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}$:
+
+$$
+|\alpha|^2 = \left( \frac{1}{\sqrt{2}} \right)^2 + \left( \frac{1}{\sqrt{2}} \right)^2 = \frac{1}{2} + \frac{1}{2} = 1
+$$
+
+#### **Step 2: Compute $P(1) = |\beta|^2$**
+
+Similarly, $\beta = \frac{1}{\sqrt{2}} - \frac{i}{\sqrt{2}}$:
+
+$$
+|\beta|^2 = \left( \frac{1}{\sqrt{2}} \right)^2 + \left( -\frac{1}{\sqrt{2}} \right)^2 = \frac{1}{2} + \frac{1}{2} = 1
+$$
+
+#### **Step 3: Check Normalization**
+
+A valid quantum state must satisfy:
+
+$$
+|\alpha|^2 + |\beta|^2 = 1
+$$
+
+However, here:
+
+$$
+|\alpha|^2 + |\beta|^2 = 1 + 1 = 2 \neq 1
+$$
+
+**Conclusion:** The given state is **not normalized**.
+
+#### **Step 4: Normalize the State**
+
+The normalization factor is $\sqrt{|\alpha|^2 + |\beta|^2} = \sqrt{2}$.
+
+The normalized amplitudes are:
+
+$$
+\alpha_{\text{norm}} = \frac{\alpha}{\sqrt{2}} = \frac{1 + i}{2}, \quad \beta_{\text{norm}} = \frac{\beta}{\sqrt{2}} = \frac{1 - i}{2}
+$$
+
+Now, the valid probabilities are:
+
+$$
+P_{\text{norm}}(0) = \left| \frac{1 + i}{2} \right|^2 = \frac{1^2 + 1^2}{4} = \frac{2}{4} = \frac{1}{2}
+$$
+
+$$
+P_{\text{norm}}(1) = \left| \frac{1 - i}{2} \right|^2 = \frac{1^2 + (-1)^2}{4} = \frac{2}{4} = \frac{1}{2}
+$$
+
+#### **Final Answer**
+
+- **Unnormalized probabilities (invalid):**
+
+  - $P(0) = \boxed{1}$
+  - $P(1) = \boxed{1}$
+
+- **Normalized probabilities (valid):**
+  - $P(0) = \boxed{\dfrac{1}{2}}$
+  - $P(1) = \boxed{\dfrac{1}{2}}$
+
+_(Original state was not normalized; corrected probabilities sum to 1.)_
 
 ---
