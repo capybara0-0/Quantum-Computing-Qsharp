@@ -101,3 +101,27 @@ The quantum state $|\phi\rangle$ is a special entangled state, called Bell state
   - Example:
     - $|\phi^-\rangle = \frac{1}{\sqrt{2}}(|00\rangle - |11\rangle)$
     - If you measure, you still get `00` or `11`, but the _quantum phase_ affects interference in experiments (critical for algorithms like Grover’s or Shor’s).
+
+## Using entanglement as a resource
+
+When two particles are entangled, subsystems are correlated and cannot be described independently. But here's the interesting part: the measurement outcomes are also correlated. That is, whatever operation happens to the state of one qubit in an entangled pair, also affects to the state of the other qubit.
+
+For example, consider the $|\phi^+\rangle$ state,
+
+$$
+|\phi^+\rangle = \frac{1}{\sqrt{2}}|00\rangle + \frac{1}{\sqrt{2}}|11\rangle
+$$
+
+If you measure both qubits, you get either $|00\rangle$ or $|11\rangle$ with equal probability. There's zero probability of obtaining the states $|01\rangle$ and $|10\rangle$.
+
+But what happens if you measure only one qubit?
+
+If you measure only the qubit $A$ and you get the $|0\rangle$ state, this means that the global system collapses to the state $|00\rangle$. This is the only possible outcome, since the probability of measuring $|01\rangle$ is zero.
+
+Therefore, without measuring the qubit $B$ you can be positive that the second qubit is also in $|0\rangle$ state. The measurement outcomes are correlated because the qubits are entangled.
+
+Entanglement can exist between two particles even if they are separated by large distances. This correlation is stronger than any classical correlation, and it is a key resource for quantum information processing tasks such as quantum teleportation, quantum cryptography, and quantum computing.
+
+```
+check the `main.qs` file to see the example of a Q# program that creates Bell states by applying quantum operations.
+```
